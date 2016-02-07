@@ -53,7 +53,45 @@ names(dfNFLComplete)[2] <- "Player"
 clean1 <- dfNFLComplete[-which(dfNFLComplete$Rk == "Rk"), ]
 clean1 <- clean1[-which(clean1$Player == "Ht & Wt"), ]
 clean1 <- droplevels(clean1)
-clean1 <- clean1[-grepl(names(clean1))]
+names(clean1)[1:38] <- c("Rk",
+                         "Player",
+                         "Year",
+                         "Age",
+                         "Draft",
+                         "Tm",
+                         "Lg",
+                         "Ht",
+                         "Wt",
+                         "BMI",
+                         "NFL.G",
+                         "NFL.GS",
+                         "NFL.Cmp",
+                         "NFL.Att",
+                         "NFL.CmpPerc",
+                         "NFL.PassYds",
+                         "NFL.PassTD",
+                         "NFL.Int",
+                         "NFL.PassTDPerc",
+                         "NFL.IntPerc",
+                         "NFL.PasserRating",
+                         "NFL.SacksTaken",
+                         "NFL.SackYds",
+                         "NFL.YPA",
+                         "NFL.AYPA",
+                         "NFL.ANYPA",
+                         "NFL.PassYdsPG",
+                         "NFL.W",
+                         "NFL.L",
+                         "NFL.T",
+                         "NFL.Tgt",
+                         "NFL.Rec",
+                         "NFL.RecYds",
+                         "NFL.YPR",
+                         "NFL.RecTD",
+                         "NFL.RecYdsPG",
+                         "NFL.CatchRate",
+                         "NFL.YPT")
+# convert columns from factor to numeric
 
 # TODO: continue fixing column names; 
 #  fix column classes; 
